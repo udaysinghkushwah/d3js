@@ -47,4 +47,50 @@ app.controller("MainCtrl", ['$scope', function($scope) {
             .attr("height", function(d) { return height - y(d.frequency); });
     });
 
+    //for selecting paragraphs
+    // var paragraphs = document.getElementsByTagName("p")
+    // for (var index = 0; index < paragraphs.length; index++) {
+    //     var paragraph = paragraphs.item(index);
+    //     paragraph.style.setProperty("color", "white", null);
+    // }
+    //equavelent to this code in d3
+    // d3.selectAll("p").style("color", "white");
+    // d3.select('body').style("background-color", "black");
+
+    //dynamic properties set in d3 
+    // d3.selectAll("p").style("color", function(d, i) {
+    //     return i % 2 ? "#fff" : "#eee";
+    // });
+
+    //compute dynamic font sizes
+    // d3.selectAll("p")
+    //     .data([4, 8, 15, 16, 23, 42])
+    //     .style("font-size", function(d) { return d + "px"; });
+
+    //enter and exit
+
+    // d3.select('body')
+    //     .selectAll('p')
+    //     .data([4, 8, 15, 16, 23, 42])
+    //     .enter().append("p")
+    //     .text(function(d) { return "I 'm number" + d + "!" });
+
+    //handling all these case sepratly
+    //update
+    // var p = d3.select('body')
+    //     .selectAll('p')
+    //     .data([4, 8, 15, 16, 23, 42])
+    //     .text(function(d) { return "sdfdsf" + d });
+    // //enter
+    // p.enter().append("p")
+    //     .text(function(d) { return d });
+
+    // //exit
+    // p.exit().remove();
+
+    //Transitions
+    // d3.select('body').transition()
+    //     .duration(750)
+    //     .delay(function(d, i) { return i * 10; })
+    //     .style("background-color", "black");
 }]);
